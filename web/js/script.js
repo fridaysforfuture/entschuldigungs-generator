@@ -15,7 +15,7 @@ function submit() {
   document.getElementById('submit-btn').disabled = true;
   document.getElementById('submit-btn').classList.add('btn-success');
   document.getElementById('submit-btn').classList.remove('btn-default');
-  alert(namefrom + "\n" + nameto + "\n" + gender);
+  alert(gender + "\n" + nameto + "\n" + namefrom);
   //createPdf();
 
 }
