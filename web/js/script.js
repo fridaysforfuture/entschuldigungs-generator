@@ -12,7 +12,7 @@ function submit() {
   namefrom = document.getElementById('namefrom').value;
   gender = document.getElementById('gender').value;
   document.getElementById('submit-btn').innerHTML = "Gesendet!";
-  alert(namefrom + nameto + gender);
+  alert(namefrom + "\n" + nameto + "\n" + gender);
   //createPdf();
 
 }
