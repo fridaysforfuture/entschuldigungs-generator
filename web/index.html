@@ -12,7 +12,8 @@
   <body>
     <h1>Informationsschreiben-Generator</h1>
     <br>
-    <form class="form-horizontal" action="assemble.php" method="get">
+    <script src="script.js"></script>
+    <form class="form-horizontal">
       <div class="col-sm-10">
         <label class="control-label col-sm-5" for="nameto">Name des Empf&auml;ngers:</label>
         <input type="text" id="nameto" class="form-control" value="Herr Müller">
@@ -25,9 +26,10 @@
       <div style="height: 10px;"></div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Absenden</button>
+          <button type="button" onclick='submit()' class="btn btn-default">Absenden</button>
         </div>
       </div>
     </form>
+    <p id="demo">test</p>
   </body>
 </html>
