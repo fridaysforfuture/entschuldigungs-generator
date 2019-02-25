@@ -10,7 +10,9 @@ function submit() {
 
   nameto = document.getElementById('nameto').value;
   namefrom = document.getElementById('namefrom').value;
+  gender = document.getElementById('gender').value;
   document.getElementById('submit-btn').innerHTML = "Gesendet!";
-  createPdf();
+  alert(namefrom + nameto + gender);
+  //createPdf();
 
 }

@@ -17,8 +17,18 @@
     <form class="form-horizontal">
       <div class="col-sm-10">
         <label class="control-label col-sm-5" for="nameto">Name des Empf&auml;ngers:</label>
-        <input type="text" id="nameto" class="form-control" value="Herr Müller">
+      <div class="form-row">
+        <div class="col">
+        <select id="gender" class="form-control">
+          <option value="men">Herr</option>
+          <option value="women">Frau</option>
+        </select>
       </div>
+        <div class="col">
+        <input type="text" id="nameto" class="form-control" value="Müller">
+      </div>
+      </div>
+    </div>
       <div style="height: 10px;"></div>
       <div class="col-sm-10">
         <label class="control-label col-sm-5" for="namefrom">Name des Absenders:</label>
