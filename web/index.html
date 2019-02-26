@@ -19,14 +19,14 @@
         <label class="control-label col-sm-5" for="nameto">Name des Empf&auml;ngers:</label>
       <div class="form-row">
         <div class="col">
-        <select id="gender" class="form-control">
-          <option value="men">Herr</option>
-          <option value="women">Frau</option>
-        </select>
-      </div>
+          <select id="gender" class="form-control">
+            <option value="men">Herr</option>
+            <option value="women">Frau</option>
+          </select>
+        </div>
         <div class="col">
-        <input type="text" id="nameto" class="form-control" value="Müller">
-      </div>
+          <input type="text" id="nameto" class="form-control" value="Müller">
+        </div>
       </div>
     </div>
       <div style="height: 10px;"></div>
@@ -38,7 +38,28 @@
     <div style="height: 20px;"></div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="button" onclick='submit()' id="submit-btn" class="btn btn-default">Absenden</button>
+        <button type="button" data-toggle="modal" data-target="#submitModal" id="submit-btn" class="btn btn-outline-success">Absenden</button>
+      </div>
+    </div>
+
+<!-- Modal -->
+    <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="submitModalLabel">Abschicken</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="modal-content"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Abbrechen</button>
+            <button type="button" id="submit-modal" onclick='submit()' class="btn btn-outline-success">Wirklich absenden?</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
