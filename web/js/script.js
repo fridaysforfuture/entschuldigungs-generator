@@ -23,8 +23,7 @@ function submit() {
   document.getElementById('submit-modal').classList.add('btn-success');
   document.getElementById('submit-modal').classList.remove('btn-outline-success');
   document.getElementById('submitModalLabel').innerHTML = "Abgeschickt!";
-  document.getElementById('modal-content').innerHTML = gender + "<br />" + nameto + "<br />" + namefrom;
-  //alert(gender + "\n" + nameto + "\n" + namefrom);
+  document.getElementById('modal-content').innerHTML = gender + "<br>" + nameto + "<br>" + namefrom;
   //createPdf();
 
 }
