@@ -9,7 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
   </head>
   <body>
     <h1>Text-Generator</h1>
@@ -19,16 +20,16 @@
       <div class="form-row">
         <div class="col">
           <select id="gender" class="form-control">
-            <option value="men">Herr</option>
             <option value="women">Frau</option>
+            <option value="men">Herr</option>
           </select>
         </div>
         <div class="col">
           <input class="form-control" id="nameto" placeholder="Name des Empf&auml;ngers" type="text">
         </div>
       </div>
-    </div>
-      <div style="height: 10px;"></div>
+          <div style="height: 10px;"></div>
+      </div>
       <div class="col-sm-10">
         <input type="text" id="namefrom" class="form-control" placeholder="Name des Absenders">
       </div>
