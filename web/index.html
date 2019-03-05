@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/moment@2.24.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/de.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
   </head>
@@ -28,10 +30,42 @@
           <input class="form-control" id="nameto" placeholder="Name des Empf&auml;ngers" type="text">
         </div>
       </div>
-          <div style="height: 10px;"></div>
       </div>
+      <div style="height: 10px;"></div>
       <div class="col-sm-10">
-        <input type="text" id="namefrom" class="form-control" placeholder="Name des Absenders">
+        <div class="form-row">
+          <div class="col">
+           <input type="text" id="namefrom" class="form-control" placeholder="Name des Elternteils">
+          </div>
+          <div class="col">
+            <input placeholder="Datum des Streiks" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="datefrom" class="form-control">
+          </div>
+      </div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div class="col-sm-10">
+        <div class="form-row">
+          <div class="col">
+            <input placeholder="Zeit der Berurlaubung" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" id="timego" class="form-control">
+          </div>
+          <div class="col">
+            <input placeholder="Beginn des Streiks" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" id="timestart" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div class="col-sm-10">
+        <div class="form-row">
+          <div class="col">
+            <select id="childgender" class="form-control">
+              <option value="daughter">Tochter</option>
+              <option value="son">Sohn</option>
+            </select>
+          </div>
+          <div class="col">
+            <input class="form-control" id="namechild" placeholder="Name des Kindes" type="text">
+          </div>
+        </div>
       </div>
     </form>
     <div style="height: 20px;"></div>
@@ -55,7 +89,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Abbrechen</button>
-            <button type="button" id="submit-modal" onclick='submit()' class="btn btn-outline-success">Wirklich absenden?</button>
+            <button type="button" id="submit-modal" onclick='submit_data()' class="btn btn-outline-success">Wirklich absenden?</button>
           </div>
         </div>
       </div>
