@@ -42,7 +42,12 @@ function submit_data() {
     var childpronoun = "Er ";
   }
 
+  var d = Date(Date.now());
+  a = d.toString();
+  datenow = moment(a).format('DD.MM.YYYY');
   date2 = moment(datefrom).format('DD.MM.YYYY');
+  alert(datenow);
+
 
   document.getElementById('submit-btn').innerHTML = "Gesendet!";
   document.getElementById('submit-btn').disabled = true;
@@ -70,7 +75,7 @@ function submit_data() {
         text: salutation + nameto + ',\n\n\n'
       },
       {
-        text: 'Hiermit bitte ich darum, ' + childsalutation + namechild + ' am ' + date2 + ' ab ' + timego + ' Uhr zu beurlauben.\n\n'
+        text: 'hiermit bitte ich darum, ' + childsalutation + namechild + ' am ' + date2 + ' ab ' + timego + ' Uhr zu beurlauben.\n\n'
       },
       {
         text: childpronoun + 'wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstartion für eine lebensrettende Klimapolitik gehen.'
@@ -126,7 +131,7 @@ function submit_data() {
             'abzusehen\n\n\nMit freundlichen Grüßen,\n\n' + namefrom + '\n\n\n'
       },
       {
-        text: city + ', den ' + date2 + ' ' + '___________________________________________________________________\n\n' +
+        text: city + ', den ' + datenow + ' ' + '___________________________________________________________________\n\n' +
             'Unterschrift der/des Erziehungsberechtigten'
       }
     ],
