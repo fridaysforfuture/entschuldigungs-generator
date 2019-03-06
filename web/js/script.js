@@ -11,6 +11,7 @@ var timego;
 var timestart;
 
 moment.lang("de").format('LL');
+moment.locale("de");
 
 function submit_data() {
 
@@ -33,7 +34,7 @@ function submit_data() {
     var childsalutation = "meinen Sohn ";
   }
 
-  alert(date2 = moment(datefrom, 'YYYY-MM-DD'));
+  date2 = moment(datefrom).format('DD.MM.YYYY');
   document.getElementById('submit-btn').innerHTML = "Gesendet!";
   document.getElementById('submit-btn').disabled = true;
   document.getElementById('submit-btn').classList.add('btn-success');
@@ -46,14 +47,14 @@ function submit_data() {
   var docDefinition = {
     content: [
       {
-        text: 'Beurlaubung '+  namefrom + '\n\n\n',
+        text: 'Beurlaubung '+  namechild + '\n\n\n',
         style: 'title'
       },
       {
         text: salutation + nameto + ',\n\n'
       },
       {
-        text: 'Hiermit bitte ich darum, ' + childsalutation + namechild + ' am ' + dateformatted + ' ab ' + timego + ' Uhr zu beurlauben.\n'
+        text: 'Hiermit bitte ich darum, ' + childsalutation + namechild + ' am ' + date2 + ' ab ' + timego + ' Uhr zu beurlauben.\n'
       }
     ],
     styles: {
