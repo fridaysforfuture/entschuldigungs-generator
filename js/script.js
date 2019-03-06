@@ -46,7 +46,6 @@ function submit_data() {
   a = d.toString();
   datenow = moment(a).format('DD.MM.YYYY');
   date2 = moment(datefrom).format('DD.MM.YYYY');
-  alert(datenow);
 
 
   document.getElementById('submit-btn').innerHTML = "Gesendet!";
