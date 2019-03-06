@@ -42,17 +42,14 @@ function submit_data() {
     var childpronoun = "Er ";
   }
 
-
   date2 = moment(datefrom).format('DD.MM.YYYY');
+
   document.getElementById('submit-btn').innerHTML = "Gesendet!";
   document.getElementById('submit-btn').disabled = true;
   document.getElementById('submit-btn').classList.add('btn-success');
   document.getElementById('submit-btn').classList.remove('btn-outline-success');
-  document.getElementById('submit-modal').innerHTML = "Gesendet!";
-  document.getElementById('submit-modal').classList.add('btn-success');
-  document.getElementById('submit-modal').classList.remove('btn-outline-success');
-  document.getElementById('submitModalLabel').innerHTML = "Abgeschickt!";
-  document.getElementById('modal-content').innerHTML = salutation + nameto + "<br>" + namefrom + "<br>" + datefrom;
+
+
   var docDefinition = {
     content: [
       {
