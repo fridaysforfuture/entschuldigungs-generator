@@ -38,7 +38,8 @@
            <input type="text" id="namefrom" class="form-control" placeholder="Name des Elternteils">
           </div>
           <div class="col">
-            <input placeholder="Datum des Streiks" type="date" id="datefrom" class="form-control">
+            <input type="text "placeholder="Datum des Streiks" class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"/>
+            <input type="date" hidden="true" id="datefrom" class="form-control">
           </div>
       </div>
       </div>
@@ -46,10 +47,12 @@
       <div class="col-sm-10">
         <div class="form-row">
           <div class="col">
-            <input placeholder="Zeit der Berurlaubung" type="time" id="timego" class="form-control">
+            <input type="text "placeholder="Zeit der Berurlaubung" class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"/>
+            <input hidden="true" type="time" id="timego" class="form-control">
           </div>
           <div class="col">
-            <input placeholder="Beginn des Streiks" type="time" id="timestart" class="form-control">
+            <input type="text" placeholder="Beginn des Streiks" class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"/>
+            <input hidden="true" type="time" id="timestart" class="form-control">
           </div>
         </div>
       </div>
