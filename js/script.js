@@ -142,5 +142,6 @@ function submit_data() {
     }
   };
 
-  pdfMake.createPdf(docDefinition).open({}, window);
+  pdfMake.createPdf(docDefinition).print();
+
 }
