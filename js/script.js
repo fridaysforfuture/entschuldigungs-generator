@@ -142,6 +142,5 @@ function submit_data() {
     }
   };
 
-  pdfMake.createPdf(docDefinition).print();
-
+  pdfMake.createPdf(docDefinition).download();
 }
