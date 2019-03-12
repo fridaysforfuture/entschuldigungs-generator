@@ -118,12 +118,12 @@ function submit_data() {
             'Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltung' +
             'en befreien" zu lassen. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzu' +
             'nehmen".\n\nAußerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstal' +
-            'tungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu' +
+            'tungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu ' +
             'Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ' +
             'ausüben kann."\n\nDa die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, ' +
             'die jedem Schüler zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, ' +
             'welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag' +
-            ' dort am ' + date2 + 'besser wahrnehmen, als in der Schule selbst.\nIch nehme zur Kenntnis, dass es sich' +
+            ' dort am ' + date2 + ' besser wahrnehmen, als in der Schule selbst.\nIch nehme zur Kenntnis, dass es sich' +
             ' bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichts' +
             'pflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.\n\n Ich ' +
             'bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden ' +
