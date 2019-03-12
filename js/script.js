@@ -104,7 +104,7 @@ function submit_data() {
             'allerdings nicht nach, weshalb für uns gilt: "Wir streiken, bis ihr handelt!"\n\nWir berufen uns bei ' +
             'unserem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in ' +
             'Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit ' +
-            'jede*r Schüler*in festgehalten (AschO, § 36).\n\nWie es in Artikel 1 des Berliner Schulgesetz steht, ' +
+            'aller Schüler*innen festgehalten (AschO, § 36).\n\nWie es in Artikel 1 des Berliner Schulgesetz steht, ' +
             'ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das ' +
             'staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."\n\nIn ' +
             'diesem Zuge sollen die Erziehungsziele so aussehen, dass (§ 3, Bildungs- und Erziehungsziele) die ' +
@@ -118,12 +118,12 @@ function submit_data() {
             'Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltung' +
             'en befreien" zu lassen. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzu' +
             'nehmen".\n\nAußerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstal' +
-            'tungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu' +
+            'tungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu ' +
             'Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ' +
             'ausüben kann."\n\nDa die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, ' +
-            'die jedem Schüler zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, ' +
+            'die allen Schüler*innen zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, ' +
             'welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag' +
-            ' dort am ' + date2 + 'besser wahrnehmen, als in der Schule selbst.\nIch nehme zur Kenntnis, dass es sich' +
+            ' dort am ' + date2 + ' besser wahrnehmen, als in der Schule selbst.\nIch nehme zur Kenntnis, dass es sich' +
             ' bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichts' +
             'pflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.\n\n Ich ' +
             'bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden ' +
