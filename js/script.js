@@ -77,7 +77,7 @@ function submit_data() {
         text: 'hiermit bitte ich darum, ' + childsalutation + namechild + ' am ' + date2 + ' ab ' + timego + ' Uhr zu beurlauben.\n\n'
       },
       {
-        text: childpronoun + 'wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstartion für eine lebensrettende Klimapolitik gehen.'
+        text: childpronoun + 'wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für eine lebensrettende Klimapolitik gehen.'
       },
       {
         text: 'Am ' + date2 + ' ab ' + timestart + ' findet in ' + city + ' eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.\n\n'
@@ -100,7 +100,7 @@ function submit_data() {
             '\n\nMit diesem Antrag möchten wir klarstellen, dass wir uns mit der rechtlichen Grundlage von ' +
             'Schülerstreiks sorgfältig auseinandergesetzt haben:\n\n\nIn Artikel 20a des Grundgesetzes ist ' +
             'festgehalten, dass der Staat die natürlichen Lebensgrundlagen schützt und Verantwortung für die ' +
-            'künftigen Generationen trägt.\n\nDieser Pflicht der künftigen Generationen gegenüber kommt der Staat ' +
+            'künftigen Generationen trägt.\n\nDieser Pflicht den künftigen Generationen gegenüber kommt der Staat ' +
             'allerdings nicht nach, weshalb für uns gilt: "Wir streiken, bis ihr handelt!"\n\nWir berufen uns bei ' +
             'unserem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in ' +
             'Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit ' +
