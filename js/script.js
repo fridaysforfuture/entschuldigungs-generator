@@ -114,9 +114,9 @@ function submit_data() {
             'Verständnis für Ursachen und Auswirkungen des Klimawandels sowie die notwendigen Anpassungen an dessen ' +
             'Folgen zu entwickeln, Maßnahmen zum Klimaschutz zu erfahren und die eigenständige und verantwortungs' +
             'bewusste Umsetzung solcher Maßnahmen im Alltag zu erlernen."\n\nEbenso besitzen alle Schüler*innen ' +
-            'das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), sich "aus wichtigem Grund auf ' +
+            'das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), "aus wichtigem Grund auf ' +
             'Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltung' +
-            'en befreien" zu lassen. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzu' +
+            'en befreit" zu werden. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzu' +
             'nehmen".\n\nAußerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstal' +
             'tungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu ' +
             'Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ' +
