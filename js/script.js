@@ -24,6 +24,7 @@ function submit_data() {
   var namechild = document.getElementById('namechild').value;
   var timego = document.getElementById('timego').value;
   var city = document.getElementById('city').value;
+  const state = document.getElementById('state').value
   var gender = document.getElementById('gender').value;
   if (gender === "women") {
     var salutation = "Sehr geehrte Frau ";
