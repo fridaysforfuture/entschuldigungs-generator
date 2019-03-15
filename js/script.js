@@ -1,6 +1,3 @@
-moment.lang('de').format('LL')
-moment.locale('de')
-
 function submit_data () {
   const nameto = document.getElementById('nameto').value
   const namefrom = document.getElementById('namefrom').value
@@ -9,6 +6,7 @@ function submit_data () {
   const namechild = document.getElementById('namechild').value
   const timego = document.getElementById('timego').value
   const city = document.getElementById('city').value
+  const state = document.getElementById('state').value
   const gender = document.getElementById('gender').value
 
   const salutation = gender === 'woman' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
