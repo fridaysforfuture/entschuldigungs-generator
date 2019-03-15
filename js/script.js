@@ -1,60 +1,31 @@
-var nameto;
-var namefrom;
-var gender;
-var salutation;
-var datefrom;
-var date2;
-var namechild;
-var childgender;
-var childsalutation;
-var timego;
-var timestart;
-var childpronoun;
-var city;
+moment.lang('de').format('LL')
+moment.locale('de')
 
-moment.lang("de").format('LL');
-moment.locale("de");
+function submit_data () {
+  const nameto = document.getElementById('nameto').value
+  const namefrom = document.getElementById('namefrom').value
+  const datefrom = document.getElementById('datefrom').value
+  const timestart = document.getElementById('timestart').value
+  const namechild = document.getElementById('namechild').value
+  const timego = document.getElementById('timego').value
+  const city = document.getElementById('city').value
+  const gender = document.getElementById('gender').value
 
-function submit_data() {
+  const salutation = gender === 'woman' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
-  var nameto = document.getElementById('nameto').value;
-  var namefrom = document.getElementById('namefrom').value;
-  var datefrom = document.getElementById('datefrom').value;
-  var timestart = document.getElementById('timestart').value;
-  var namechild = document.getElementById('namechild').value;
-  var timego = document.getElementById('timego').value;
-  var city = document.getElementById('city').value;
-  var gender = document.getElementById('gender').value;
-  if (gender === "women") {
-    var salutation = "Sehr geehrte Frau";
-  } else {
-    var salutation = "Sehr geehrter Herr";
-  }
-  var childgender = document.getElementById('childgender').value;
-  if (childgender === "daughter") {
-    var childsalutation = "meine Tochter";
-  } else {
-    var childsalutation = "meinen Sohn";
-  }
-  if (childgender === "daughter") {
-    var childpronoun = "Sie";
-  } else {
-    var childpronoun = "Er";
-  }
+  const childgender = document.getElementById('childgender').value
+  const childsalutation = childgender === 'dauther' ? 'meine Tochter' : 'mein Sohn'
+  const childpronoun = childgender === 'dauther' ? 'Sie' : 'Er'
 
-  var d = Date(Date.now());
-  a = d.toString();
-  datenow = moment(a).format('DD.MM.YYYY');
-  date2 = moment(datefrom).format('DD.MM.YYYY');
+  const datenow = moment().format('DD.MM.YYYY')
+  const date2 = moment(datefrom).format('DD.MM.YYYY')
 
+  document.getElementById('submit-btn').innerHTML = 'Gesendet!'
+  document.getElementById('submit-btn').disabled = true
+  document.getElementById('submit-btn').classList.add('btn-success')
+  document.getElementById('submit-btn').classList.remove('btn-outline-success')
 
-  document.getElementById('submit-btn').innerHTML = "Gesendet!";
-  document.getElementById('submit-btn').disabled = true;
-  document.getElementById('submit-btn').classList.add('btn-success');
-  document.getElementById('submit-btn').classList.remove('btn-outline-success');
-
-
-  var docDefinition = {
+  const docDefinition = {
     content: [
       {
         alignment: 'justify',
@@ -136,7 +107,7 @@ Unterschrift der/des Erziehungsberechtigten`
         bold: true
       }
     }
-  };
+  }
 
-  pdfMake.createPdf(docDefinition).download();
+  pdfMake.createPdf(docDefinition).download()
 }
