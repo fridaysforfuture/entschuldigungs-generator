@@ -9,7 +9,7 @@ function submit_data () {
   const state = document.getElementById('state').value
   const gender = document.getElementById('gender').value
 
-  const salutation = gender === 'woman' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
+  const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
   const childgender = document.getElementById('childgender').value
   const childsalutation = childgender === 'dauther' ? 'meine Tochter' : 'mein Sohn'
