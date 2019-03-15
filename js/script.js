@@ -1,67 +1,35 @@
-var nameto;
-var namefrom;
-var gender;
-var salutation;
-var datefrom;
-var date2;
-var namechild;
-var childgender;
-var childsalutation;
-var timego;
-var timestart;
-var childpronoun;
-var city;
-
-moment.lang("de").format('LL');
-moment.locale("de");
-
-function submit_data() {
-
-  var nameto = document.getElementById('nameto').value;
-  var namefrom = document.getElementById('namefrom').value;
-  var datefrom = document.getElementById('datefrom').value;
-  var timestart = document.getElementById('timestart').value;
-  var namechild = document.getElementById('namechild').value;
-  var timego = document.getElementById('timego').value;
-  var city = document.getElementById('city').value;
+function submit_data () {
+  const nameto = document.getElementById('nameto').value
+  const namefrom = document.getElementById('namefrom').value
+  const datefrom = document.getElementById('datefrom').value
+  const timestart = document.getElementById('timestart').value
+  const namechild = document.getElementById('namechild').value
+  const timego = document.getElementById('timego').value
+  const city = document.getElementById('city').value
   const state = document.getElementById('state').value
-  var gender = document.getElementById('gender').value;
-  if (gender === "women") {
-    var salutation = "Sehr geehrte Frau ";
-  } else {
-    var salutation = "Sehr geehrter Herr ";
-  }
-  var childgender = document.getElementById('childgender').value;
-  if (childgender === "daughter") {
-    var childsalutation = "meine Tochter ";
-  } else {
-    var childsalutation = "meinen Sohn ";
-  }
-  if (childgender === "daughter") {
-    var childpronoun = "Sie ";
-  } else {
-    var childpronoun = "Er ";
-  }
+  const gender = document.getElementById('gender').value
 
-  var d = Date(Date.now());
-  a = d.toString();
-  datenow = moment(a).format('DD.MM.YYYY');
-  date2 = moment(datefrom).format('DD.MM.YYYY');
+  const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
+  const childgender = document.getElementById('childgender').value
+  const childsalutation = childgender === 'dauther' ? 'meine Tochter' : 'mein Sohn'
+  const childpronoun = childgender === 'dauther' ? 'Sie' : 'Er'
 
-  document.getElementById('submit-btn').innerHTML = "Gesendet!";
-  document.getElementById('submit-btn').disabled = true;
-  document.getElementById('submit-btn').classList.add('btn-success');
-  document.getElementById('submit-btn').classList.remove('btn-outline-success');
+  const datenow = moment().format('DD.MM.YYYY')
+  const date2 = moment(datefrom).format('DD.MM.YYYY')
 
+  document.getElementById('submit-btn').innerHTML = 'Gesendet!'
+  document.getElementById('submit-btn').disabled = true
+  document.getElementById('submit-btn').classList.add('btn-success')
+  document.getElementById('submit-btn').classList.remove('btn-outline-success')
 
-  var docDefinition = {
+  const docDefinition = {
     content: [
       {
         alignment: 'justify',
         columns: [
           {
-            text: 'Beurlaubung \n' + namechild + '\n\n\n',
+            text: `Beurlaubung \n ${namechild} \n\n\n`,
             style: 'title'
           },
           {
@@ -72,67 +40,61 @@ function submit_data() {
         ]
       },
       {
-        text: salutation + nameto + ',\n\n\n'
-      },
-      {
-        text: 'hiermit bitte ich darum, ' + childsalutation + namechild + ' am ' + date2 + ' ab ' + timego + ' Uhr zu beurlauben.\n\n'
-      },
-      {
-        text: childpronoun + 'wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für eine lebensrettende Klimapolitik gehen.'
-      },
-      {
-        text: 'Am ' + date2 + ' ab ' + timestart + ' findet in ' + city + ' eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.\n\n'
-      },
-      {
-        text: 'Nach dem Vorbild von und in Solidarität mit Greta Thunberg, die jeden Freitag vor dem schwedischen ' +
-            'Parlament streikt, ist die Bewegung inzwischen auf der ganzen Welt vertreten.\n\n' +
-            '"Warum soll ich für eine Zukunft lernen, die vielleicht bald keine mehr ist, wenn niemand etwas tut, ' +
-            'um diese Zukunft zu retten?"\n\nDer Klimawandel ist längst eine reale Bedrohung für unsere Zukunft. ' +
-            'Wir werden die ersten Leidtragenden des Klimawandels sein. Gleichzeitig sind wir die letzte Generation, ' +
-            'die einen katastrophalen Klimawandel noch verhindern kann. Doch unsere Politiker*innen unternehmen ' +
-            'nichts, um die Klimakrise abzuwenden.\n\nDie Treibhausgas-Emissionen steigen seit Jahren und noch ' +
-            'immer werden Kohle, Öl und Gas abgebaut und verbrannt. Deswegen gehen wir freitags weder in die Schule, ' +
-            'noch in die Uni. Denn mit jedem Tag, der ungenutzt verstreicht, setzt ihr unsere Zukunft aufs Spiel!\n\n' +
-            'Wir sind weder an eine Partei noch an eine Organisation gebunden. Die Klimastreik-Bewegung hat ihre ' +
-            'eigene Dynamik und wird durch hunderte individulle junge Menschen getragen, die freitags streiken, ' +
-            'unsere Website aufbauen, Pressemitteilungen schreiben, Reden halten, Lautsprecher organisieren und ' +
-            'vieles mehr.\n\nWir haben im Vorfeld schon viel Unterstützung erfahren, sind allerdings auch oft ' +
-            'auf Ablehnung gestoßen, meist aufgrund von Unsicherheit und der Angst vor negativen Konsequenzen.' +
-            '\n\nMit diesem Antrag möchten wir klarstellen, dass wir uns mit der rechtlichen Grundlage von ' +
-            'Schülerstreiks sorgfältig auseinandergesetzt haben:\n\n\nIn Artikel 20a des Grundgesetzes ist ' +
-            'festgehalten, dass der Staat die natürlichen Lebensgrundlagen schützt und Verantwortung für die ' +
-            'künftigen Generationen trägt.\n\nDieser Pflicht den künftigen Generationen gegenüber kommt der Staat ' +
-            'allerdings nicht nach, weshalb für uns gilt: "Wir streiken, bis ihr handelt!"\n\nWir berufen uns bei ' +
-            'unserem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in ' +
-            'Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit ' +
-            'aller Schüler*innen festgehalten (AschO, § 36).\n\nWie es in Artikel 1 des Berliner Schulgesetz steht, ' +
-            'ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das ' +
-            'staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."\n\nIn ' +
-            'diesem Zuge sollen die Erziehungsziele so aussehen, dass (§ 3, Bildungs- und Erziehungsziele) die ' +
-            'Schüler*innen insbesondere befähigt sind:\n\n"5. die Auswirkungen des eigenen und gesellschaftlichen ' +
-            'Handelns auf die natürlichen lokalen und globalen Lebensgrundlagen zu erkennen, für ihren Schutz ' +
-            'Mitverantwortung zu übernehmen und sie für die folgenden Generationen zu erhalten,\n\n6. ein ' +
-            'Verständnis für Ursachen und Auswirkungen des Klimawandels sowie die notwendigen Anpassungen an dessen ' +
-            'Folgen zu entwickeln, Maßnahmen zum Klimaschutz zu erfahren und die eigenständige und verantwortungs' +
-            'bewusste Umsetzung solcher Maßnahmen im Alltag zu erlernen."\n\nEbenso besitzen alle Schüler*innen ' +
-            'das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), "aus wichtigem Grund auf ' +
-            'Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltung' +
-            'en befreit" zu werden. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzu' +
-            'nehmen".\n\nAußerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstal' +
-            'tungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu ' +
-            'Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ' +
-            'ausüben kann."\n\nDa die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, ' +
-            'die allen Schüler*innen zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, ' +
-            'welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag' +
-            ' dort am ' + date2 + ' besser wahrnehmen, als in der Schule selbst.\nIch nehme zur Kenntnis, dass es sich' +
-            ' bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichts' +
-            'pflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.\n\n Ich ' +
-            'bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden ' +
-            'abzusehen\n\n\nMit freundlichen Grüßen,\n\n' + namefrom + '\n\n\n'
-      },
-      {
-        text: city + ', den ' + datenow + ' ' + '___________________________________________________________________\n\n' +
-            'Unterschrift der/des Erziehungsberechtigten'
+        text: `${salutation} ${nameto},
+
+
+hiermit bitte ich darum, ${childsalutation} ${namechild} am ${date2} ab ${timego} Uhr zu beurlauben.
+
+${childpronoun} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für eine lebensrettende Klimapolitik gehen.
+Am ${date2} ab ${timestart} findet in ${city} eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.
+
+Nach dem Vorbild von und in Solidarität mit Greta Thunberg, die jeden Freitag vor dem schwedischen Parlament streikt, ist die Bewegung inzwischen auf der ganzen Welt vertreten.
+
+"Warum soll ich für eine Zukunft lernen, die vielleicht bald keine mehr ist, wenn niemand etwas tut, um diese Zukunft zu retten?"
+
+Der Klimawandel ist längst eine reale Bedrohung für unsere Zukunft. Wir werden die ersten Leidtragenden des Klimawandels sein. Gleichzeitig sind wir die letzte Generation, die einen katastrophalen Klimawandel noch verhindern kann. Doch unsere Politiker*innen unternehmen nichts, um die Klimakrise abzuwenden.
+
+Die Treibhausgas-Emissionen steigen seit Jahren und noch immer werden Kohle, Öl und Gas abgebaut und verbrannt. Deswegen gehen wir freitags weder in die Schule, noch in die Uni. Denn mit jedem Tag, der ungenutzt verstreicht, setzt ihr unsere Zukunft aufs Spiel!
+
+Wir sind weder an eine Partei noch an eine Organisation gebunden. Die Klimastreik-Bewegung hat ihre eigene Dynamik und wird durch hunderte individulle junge Menschen getragen, die freitags streiken, unsere Website aufbauen, Pressemitteilungen schreiben, Reden halten, Lautsprecher organisieren und vieles mehr.
+
+Wir haben im Vorfeld schon viel Unterstützung erfahren, sind allerdings auch oft auf Ablehnung gestoßen, meist aufgrund von Unsicherheit und der Angst vor negativen Konsequenzen.
+
+Mit diesem Antrag möchten wir klarstellen, dass wir uns mit der rechtlichen Grundlage von Schülerstreiks sorgfältig auseinandergesetzt haben:
+
+
+In Artikel 20a des Grundgesetzes ist festgehalten, dass der Staat die natürlichen Lebensgrundlagen schützt und Verantwortung für die künftigen Generationen trägt.
+
+Dieser Pflicht den künftigen Generationen gegenüber kommt der Staat allerdings nicht nach, weshalb für uns gilt: "Wir streiken, bis ihr handelt!"
+
+Wir berufen uns bei unserem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit aller Schüler*innen festgehalten (AschO, § 36).
+
+Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
+
+In diesem Zuge sollen die Erziehungsziele so aussehen, dass (§ 3, Bildungs- und Erziehungsziele) die Schüler*innen insbesondere befähigt sind:
+
+"5. die Auswirkungen des eigenen und gesellschaftlichen Handelns auf die natürlichen lokalen und globalen Lebensgrundlagen zu erkennen, für ihren Schutz Mitverantwortung zu übernehmen und sie für die folgenden Generationen zu erhalten,
+
+6. ein Verständnis für Ursachen und Auswirkungen des Klimawandels sowie die notwendigen Anpassungen an dessen Folgen zu entwickeln, Maßnahmen zum Klimaschutz zu erfahren und die eigenständige und verantwortungsbewusste Umsetzung solcher Maßnahmen im Alltag zu erlernen."
+
+Ebenso besitzen alle Schüler*innen das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), "aus wichtigem Grund auf Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltungen befreit" zu werden. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzunehmen".
+
+Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstaltungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ausüben kann."
+
+Da die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, die allen Schüler*innen zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag dort am ${date2} besser wahrnehmen, als in der Schule selbst.
+Ich nehme zur Kenntnis, dass es sich bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichtspflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.
+
+Ich bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden abzusehen
+
+
+Mit freundlichen Grüßen,
+
+${namefrom}
+
+
+${city}, den ${datenow} ${new Array(80 - city.length - datenow.length).join('_')}
+
+Unterschrift der/des Erziehungsberechtigten`
       }
     ],
     styles: {
@@ -141,7 +103,7 @@ function submit_data() {
         bold: true
       }
     }
-  };
+  }
 
-  pdfMake.createPdf(docDefinition).download();
+  pdfMake.createPdf(docDefinition).download()
 }
