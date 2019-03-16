@@ -12,8 +12,8 @@ function submit_data () {
   const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
   const childgender = document.getElementById('childgender').value
-  const childsalutation = childgender === 'dauther' ? 'meine Tochter' : 'mein Sohn'
-  const childpronoun = childgender === 'dauther' ? 'Sie' : 'Er'
+  const childsalutation = childgender === 'daugther' ? 'meine Tochter' : 'mein Sohn'
+  const childpronoun = childgender === 'daugther' ? 'Sie' : 'Er'
 
   const datenow = moment().format('DD.MM.YYYY')
   const date2 = moment(datefrom).format('DD.MM.YYYY')
