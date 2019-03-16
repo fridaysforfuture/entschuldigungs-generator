@@ -1,3 +1,5 @@
+// TODO: write a reason for each state, fill it in the gaps in the switch statements and replace the berlin reason by the constant stateReason
+
 function submit_data () {
   const nameto = document.getElementById('nameto').value
   const namefrom = document.getElementById('namefrom').value
@@ -15,23 +17,55 @@ function submit_data () {
   const childsalutation = childgender === 'daughter' ? 'meine Tochter' : 'mein Sohn'
   const childpronoun = childgender === 'daughter' ? 'Sie' : 'Er'
 
-  switch(state) {
-    case bw: const stateReason = ` `; break
-    case by: const stateReason = ` `; break
-    case be: const stateReason = ` `; break
-    case bb: const stateReason = ` `; break
-    case hb: const stateReason = ` `; break
-    case hh: const stateReason = ` `; break
-    case he: const stateReason = ` `; break
-    case mv: const stateReason = ` `; break
-    case ni: const stateReason = ` `; break
-    case nw: const stateReason = ` `; break
-    case rp: const stateReason = ` `; break
-    case sl: const stateReason = ` `; break
-    case sn: const stateReason = ` `; break
-    case st: const stateReason = ` `; break
-    case sh: const stateReason = ` `; break
-    case th: const stateReason = ` `; break
+  switch (state) {
+    case bw:
+      const stateReason = ` `
+      break
+    case by:
+      const stateReason = ` `
+      break
+    case be:
+      const stateReason = ` `
+      break
+    case bb:
+      const stateReason = ` `
+      break
+    case hb:
+      const stateReason = ` `
+      break
+    case hh:
+      const stateReason = ` `
+      break
+    case he:
+      const stateReason = ` `
+      break
+    case mv:
+      const stateReason = ` `
+      break
+    case ni:
+      const stateReason = ` `
+      break
+    case nw:
+      const stateReason = ` `
+      break
+    case rp:
+      const stateReason = ` `
+      break
+    case sl:
+      const stateReason = ` `
+      break
+    case sn:
+      const stateReason = ` `
+      break
+    case st:
+      const stateReason = ` `
+      break
+    case sh:
+      const stateReason = ` `
+      break
+    case th:
+      const stateReason = ` `
+      break
   }
 
   const datenow = moment().format('DD.MM.YYYY')
