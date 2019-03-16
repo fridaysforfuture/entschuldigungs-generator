@@ -13,3 +13,5 @@ Quelle: https://www.schulministerium.nrw.de/docs/Recht/Schulrecht/Schulgesetz/Sc
 
 - §2 (1) Punkte 5,6 Umweltschutz
 - §63 Ergänzung 3.2.1 Beurlaubung (ACHTUNG: nur von Schulleitung!)
+
+Quelle: https://www.mk.niedersachsen.de/download/79353/Das_Niedersaechsische_Schulgesetz_NSchG_Lesefassung_Stand_Oktober_2016.pdf
