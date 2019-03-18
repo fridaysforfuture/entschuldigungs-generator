@@ -159,7 +159,7 @@ Mit freundlichen Grüßen,
 ${namefrom}
 
 
-${city}, den ${datenow} ${new Array(80 - city.length - datenow.length).join('_')}
+${city}, den ${datenow} ${new Array(80 - city.length - datenow.length).join('_')} 
 
 Unterschrift der/des Erziehungsberechtigten`
       }
