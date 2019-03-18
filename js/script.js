@@ -1,4 +1,4 @@
-// TODO: write a reason for each state, fill it in the gaps in the switch statements and replace the berlin reason by the constant stateReason
+// TODO: write a reason for each state, fill it in the gaps in the switch statements and uncomment them
 
 function submit_data () {
   const nameto = document.getElementById('nameto').value
@@ -17,54 +17,78 @@ function submit_data () {
   const childsalutation = childgender === 'daughter' ? 'meine Tochter' : 'mein Sohn'
   const childpronoun = childgender === 'daughter' ? 'Sie' : 'Er'
 
+  var stateReason
   switch (state) {
-    case bw:
-      const stateReason = ` `
+    // case bw:
+    //   const stateReason = ` `
+    //   break
+    // case by:
+    //   const stateReason = ` `
+    //   break
+    case 'be':
+      stateReason = `Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
+
+In diesem Zuge sollen die Erziehungsziele so aussehen, dass (§ 3, Bildungs- und Erziehungsziele) die Schüler*innen insbesondere befähigt sind:
+
+"5. die Auswirkungen des eigenen und gesellschaftlichen Handelns auf die natürlichen lokalen und globalen Lebensgrundlagen zu erkennen, für ihren Schutz Mitverantwortung zu übernehmen und sie für die folgenden Generationen zu erhalten,
+
+6. ein Verständnis für Ursachen und Auswirkungen des Klimawandels sowie die notwendigen Anpassungen an dessen Folgen zu entwickeln, Maßnahmen zum Klimaschutz zu erfahren und die eigenständige und verantwortungsbewusste Umsetzung solcher Maßnahmen im Alltag zu erlernen."
+
+Ebenso besitzen alle Schüler*innen das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), "aus wichtigem Grund auf Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltungen befreit" zu werden. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzunehmen".
+
+Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstaltungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ausüben kann."`
       break
-    case by:
-      const stateReason = ` `
-      break
-    case be:
-      const stateReason = ` `
-      break
-    case bb:
-      const stateReason = ` `
-      break
-    case hb:
-      const stateReason = ` `
-      break
-    case hh:
-      const stateReason = ` `
-      break
-    case he:
-      const stateReason = ` `
-      break
-    case mv:
-      const stateReason = ` `
-      break
-    case ni:
-      const stateReason = ` `
-      break
-    case nw:
-      const stateReason = ` `
-      break
-    case rp:
-      const stateReason = ` `
-      break
-    case sl:
-      const stateReason = ` `
-      break
-    case sn:
-      const stateReason = ` `
-      break
-    case st:
-      const stateReason = ` `
-      break
-    case sh:
-      const stateReason = ` `
-      break
-    case th:
-      const stateReason = ` `
+    // case bb:
+    //   var stateReason = ` `
+    //   break
+    // case hb:
+    //   var stateReason = ` `
+    //   break
+    // case hh:
+    //   var stateReason = ` `
+    //   break
+    // case he:
+    //   var stateReason = ` `
+    //   break
+    // case mv:
+    //   var stateReason = ` `
+    //   break
+    // case ni:
+    //   var stateReason = ` `
+    //   break
+    // case nw:
+    //   var stateReason = ` `
+    //   break
+    // case rp:
+    //   var stateReason = ` `
+    //   break
+    // case sl:
+    //   var stateReason = ` `
+    //   break
+    // case sn:
+    //   var stateReason = ` `
+    //   break
+    // case st:
+    //   var stateReason = ` `
+    //   break
+    // case sh:
+    //   var stateReason = ` `
+    //   break
+    // case th:
+    //   var stateReason = ` `
+    //   break
+    default:
+      stateReason = `Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
+
+In diesem Zuge sollen die Erziehungsziele so aussehen, dass (§ 3, Bildungs- und Erziehungsziele) die Schüler*innen insbesondere befähigt sind:
+
+"5. die Auswirkungen des eigenen und gesellschaftlichen Handelns auf die natürlichen lokalen und globalen Lebensgrundlagen zu erkennen, für ihren Schutz Mitverantwortung zu übernehmen und sie für die folgenden Generationen zu erhalten,
+
+6. ein Verständnis für Ursachen und Auswirkungen des Klimawandels sowie die notwendigen Anpassungen an dessen Folgen zu entwickeln, Maßnahmen zum Klimaschutz zu erfahren und die eigenständige und verantwortungsbewusste Umsetzung solcher Maßnahmen im Alltag zu erlernen."
+
+Ebenso besitzen alle Schüler*innen das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), "aus wichtigem Grund auf Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltungen befreit" zu werden. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzunehmen".
+
+Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstaltungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ausüben kann."`
       break
   }
 
@@ -122,17 +146,7 @@ Dieser Pflicht den künftigen Generationen gegenüber kommt der Staat allerdings
 
 Wir berufen uns bei unserem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit aller Schüler*innen festgehalten (AschO, § 36).
 
-Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
-
-In diesem Zuge sollen die Erziehungsziele so aussehen, dass (§ 3, Bildungs- und Erziehungsziele) die Schüler*innen insbesondere befähigt sind:
-
-"5. die Auswirkungen des eigenen und gesellschaftlichen Handelns auf die natürlichen lokalen und globalen Lebensgrundlagen zu erkennen, für ihren Schutz Mitverantwortung zu übernehmen und sie für die folgenden Generationen zu erhalten,
-
-6. ein Verständnis für Ursachen und Auswirkungen des Klimawandels sowie die notwendigen Anpassungen an dessen Folgen zu entwickeln, Maßnahmen zum Klimaschutz zu erfahren und die eigenständige und verantwortungsbewusste Umsetzung solcher Maßnahmen im Alltag zu erlernen."
-
-Ebenso besitzen alle Schüler*innen das Recht (§ 46 Rechte und Pflichten der Schülerinnen und Schüler), "aus wichtigem Grund auf Antrag vom Unterricht beurlaubt oder von der Teilnahme an einzelnen Unterrichts- und Schulveranstaltungen befreit" zu werden. Als Schüler*in ist man lediglich "verpflichtet, regelmäßig am Unterricht teilzunehmen".
-
-Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstaltungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ausüben kann."
+${stateReason}
 
 Da die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, die allen Schüler*innen zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag dort am ${date2} besser wahrnehmen, als in der Schule selbst.
 Ich nehme zur Kenntnis, dass es sich bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichtspflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.
