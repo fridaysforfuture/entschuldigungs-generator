@@ -10,21 +10,35 @@ function submit_data () {
   const city = document.getElementById('city').value
   const state = document.getElementById('state').value
   const gender = document.getElementById('gender').value
+  const schoolClass = document.getElementById('class').value
 
   const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
   const childgender = document.getElementById('childgender').value
-  const childsalutation = childgender === 'daughter' ? 'meine Tochter' : 'mein Sohn'
+  const childsalutation = childgender === 'daughter' ? 'meine Tochter' : 'meinen Sohn'
   const childpronoun = childgender === 'daughter' ? 'Sie' : 'Er'
+  const childpronoun2 = childgender === 'daughter' ? 'ihre' : 'seine'
 
-  var stateReason
+  let stateReason
   switch (state) {
     // case bw:
-    //   const stateReason = ` `
+    //   stateReason = ` `
     //   break
-    // case by:
-    //   const stateReason = ` `
-    //   break
+    case 'by':
+      stateReason = `Zudem ist in der allgemeinen Schulordnung die Meinungsfreiheit aller Schüler*innen festgehalten (BayEUG Art. 56 (3) S.1).
+      
+ Wie es in Artikel 1 des Bayerischen Gesetzes für das Erziehungs- und Unterrichtswesen steht, sind „[o]berste Bildungsziele […] Verantwortungsgefühl und Verantwortungsfreudigkeit, […] und Verantwortungsbewusstsein für Natur und Umwelt.“ 
+
+„Die Schulen haben insbesondere die Aufgabe, […] die Schülerinnen und Schüler zur gleichberechtigten Wahrnehmung ihrer Rechte und Pflichten in Familie, Staat und Gesellschaft zu befähigen [und] Verantwortungsbewusstsein für die Umwelt zu wecken.“ (Artikel 2 (1))
+
+Dementsprechend haben sich laut Artikel 56 (4) S.1 „[a]lle Schülerinnen und Schüler […] so zu verhalten, dass die Aufgabe der Schule erfüllt und das Bildungsziel erreicht werden kann.“
+
+Der Bayerischen Verfassung ist in Artikel 141 (1) S. 1 ist zu entnehmen, dass der „Schutz der natürlichen Lebensgrundlagen […], auch eingedenk der Verantwortung für die kommenden Generationen, der besonderen Fürsorge jedes einzelnen und der staatlichen Gemeinschaft anvertraut“ ist. Diese Pflicht wird mit dem Besuch der Demonstration erfüllt.
+
+Hierfür können „Schülerinnen und Schüler […] auf schriftlichen Antrag in begründeten Ausnahmefällen vom Unterricht in einzelnen Fächern befreit oder vom Schulbesuch beurlaubt werden.“ (BaySchO §20 (3) S. 1)
+
+„Ist eine Schülerin oder ein Schüler aus zwingenden Gründen verhindert am Unterricht […], so ist die Schule unverzüglich unter Angabe des Grundes zu verständigen.“ (BaySchO §20 (1) S. 1). Nachdem der Einsatz für das Abwenden der Klimakrise ein zwingend notwendiger Schritt ist, möchte ich Sie von der Abwesenheit meines Kindes am genannten Tag in Kenntnis setzen.`
+      break
     case 'be':
       stateReason = `Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
 
@@ -38,44 +52,44 @@ Ebenso besitzen alle Schüler*innen das Recht (§ 46 Rechte und Pflichten der Sc
 
 Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertretung) "Veranstaltungen der Schülervertretungen, die außerhalb des Schulgeländes stattfinden, von der Schulleitung zu Veranstaltungen der Schule erklären zu lassen, wenn die Schule den Umständen nach gebotene Aufsicht ausüben kann."`
       break
-    // case bb:
-    //   var stateReason = ` `
+    // case 'bb':
+    //   stateReason = ` `
     //   break
-    // case hb:
-    //   var stateReason = ` `
+    // case 'hb':
+    //   stateReason = ` `
     //   break
-    // case hh:
-    //   var stateReason = ` `
+    // case 'hh':
+    //   stateReason = ` `
     //   break
-    // case he:
-    //   var stateReason = ` `
+    // case 'he':
+    //   stateReason = ` `
     //   break
-    // case mv:
-    //   var stateReason = ` `
+    // case 'mv':
+    //   stateReason = ` `
     //   break
-    // case ni:
-    //   var stateReason = ` `
+    // case 'ni':
+    //   stateReason = ` `
     //   break
-    // case nw:
-    //   var stateReason = ` `
+    // case 'nw':
+    //   stateReason = ` `
     //   break
-    // case rp:
-    //   var stateReason = ` `
+    // case 'rp':
+    //   stateReason = ` `
     //   break
-    // case sl:
-    //   var stateReason = ` `
+    // case 'sl':
+    //   stateReason = ` `
     //   break
-    // case sn:
-    //   var stateReason = ` `
+    // case 'sn':
+    //   stateReason = ` `
     //   break
-    // case st:
-    //   var stateReason = ` `
+    // case 'st':
+    //   stateReason = ` `
     //   break
-    // case sh:
-    //   var stateReason = ` `
+    // case 'sh':
+    //   stateReason = ` `
     //   break
-    // case th:
-    //   var stateReason = ` `
+    // case 'th':
+    //   stateReason = ` `
     //   break
     default:
       stateReason = `Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
@@ -120,24 +134,22 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
         text: `${salutation} ${nameto},
 
 
-hiermit bitte ich darum, ${childsalutation} ${namechild} am ${date2} ab ${timego} Uhr zu beurlauben.
+hiermit beantrage ich, ${childsalutation} ${namechild}, Klasse ${schoolClass}, am ${date2} ab ${timego} Uhr zu beurlauben.
 
 ${childpronoun} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für eine lebensrettende Klimapolitik gehen.
 Am ${date2} ab ${timestart} findet in ${city} eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.
 
 Nach dem Vorbild von und in Solidarität mit Greta Thunberg, die jeden Freitag vor dem schwedischen Parlament streikt, ist die Bewegung inzwischen auf der ganzen Welt vertreten.
 
-"Warum soll ich für eine Zukunft lernen, die vielleicht bald keine mehr ist, wenn niemand etwas tut, um diese Zukunft zu retten?"
+Der Klimawandel ist längst eine reale Bedrohung für unsere Zukunft. Unsere Kinder werden die ersten Leidtragenden des Klimawandels sein. Gleichzeitig sind wir die letzte Generation, die einen katastrophalen Klimawandel noch verhindern kann. Doch unsere Politiker*innen unternehmen nichts, um die Klimakrise abzuwenden.
 
-Der Klimawandel ist längst eine reale Bedrohung für unsere Zukunft. Wir werden die ersten Leidtragenden des Klimawandels sein. Gleichzeitig sind wir die letzte Generation, die einen katastrophalen Klimawandel noch verhindern kann. Doch unsere Politiker*innen unternehmen nichts, um die Klimakrise abzuwenden.
+Die Treibhausgas-Emissionen steigen seit Jahren und noch immer werden Kohle, Öl und Gas abgebaut und verbrannt. Deswegen geht mein Kind freitags nicht in die Schule. Denn mit jedem Tag, der ungenutzt verstreicht, wird ${childpronoun2} Zukunft aufs Spiel gesetzt!
 
-Die Treibhausgas-Emissionen steigen seit Jahren und noch immer werden Kohle, Öl und Gas abgebaut und verbrannt. Deswegen gehen wir freitags weder in die Schule, noch in die Uni. Denn mit jedem Tag, der ungenutzt verstreicht, setzt ihr unsere Zukunft aufs Spiel!
+#FridaysForFuture ist weder an eine Partei noch an eine Organisation gebunden. Die Klimastreik-Bewegung hat ihre eigene Dynamik und wird durch hunderte individuelle junge Menschen getragen, die freitags streiken, eine Website aufbauen, Pressemitteilungen schreiben, Reden halten, Lautsprecher organisieren und vieles mehr.
 
-Wir sind weder an eine Partei noch an eine Organisation gebunden. Die Klimastreik-Bewegung hat ihre eigene Dynamik und wird durch hunderte individulle junge Menschen getragen, die freitags streiken, unsere Website aufbauen, Pressemitteilungen schreiben, Reden halten, Lautsprecher organisieren und vieles mehr.
+Die Bewegung hat im Vorfeld schon viel Unterstützung erfahren, ist allerdings auch oft auf Ablehnung gestoßen, meist aufgrund von Unsicherheit und der Angst vor negativen Konsequenzen.
 
-Wir haben im Vorfeld schon viel Unterstützung erfahren, sind allerdings auch oft auf Ablehnung gestoßen, meist aufgrund von Unsicherheit und der Angst vor negativen Konsequenzen.
-
-Mit diesem Antrag möchten wir klarstellen, dass wir uns mit der rechtlichen Grundlage von Schülerstreiks sorgfältig auseinandergesetzt haben:
+Mit diesem Antrag möchte ich klarstellen, dass ich mich mit der rechtlichen Grundlage von Schülerstreiks sorgfältig auseinandergesetzt haben:
 
 
 In Artikel 20a des Grundgesetzes ist festgehalten, dass der Staat die natürlichen Lebensgrundlagen schützt und Verantwortung für die künftigen Generationen trägt.
