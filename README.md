@@ -1,4 +1,4 @@
-# Text-Generator für Fridays For Future
+# Entschuldigungs-Generator für Fridays For Future
 
 https://fridaysforfuture.github.io/entschuldigungs-generator/
 
