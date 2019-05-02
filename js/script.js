@@ -11,6 +11,7 @@ function submit_data () {
   const state = document.getElementById('state').value
   const gender = document.getElementById('gender').value
   const schoolClass = document.getElementById('class').value
+  const place = document.getElementById('place').value
 
   const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
@@ -137,7 +138,7 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
 hiermit beantrage ich, ${childsalutation} ${namechild}, Klasse ${schoolClass}, am ${date2} ab ${timego} Uhr zu beurlauben.
 
 ${childpronoun} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für eine lebensrettende Klimapolitik gehen.
-Am ${date2} ab ${timestart} findet in ${city} eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.
+Am ${date2} ab ${timestart} findet in ${city}, ${place}, eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.
 
 Nach dem Vorbild von und in Solidarität mit Greta Thunberg, die jeden Freitag vor dem schwedischen Parlament streikt, ist die Bewegung inzwischen auf der ganzen Welt vertreten.
 
@@ -184,5 +185,5 @@ Unterschrift der/des Erziehungsberechtigten`
     }
   }
 
-  pdfMake.createPdf(docDefinition).download()
+  pdfMake.createPdf(docDefinition).download(`Entschuldigung_${namechild}`)
 }
