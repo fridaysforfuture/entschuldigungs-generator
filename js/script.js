@@ -210,5 +210,5 @@ Unterschrift der/des Erziehungsberechtigten`
     }
   }
 
-  pdfMake.createPdf(docDefinition).download(`Entschuldigung_${namechild}`)
+  pdfMake.createPdf(docDefinition).download(`Entschuldigung_${namechild}.pdf`)
 }
