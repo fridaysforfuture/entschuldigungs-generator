@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html dir="ltr" lang="de">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<title>Entschuldigungs-Generator</title>
-	<link rel="shortcut icon" href="favicon.webp">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	<link href="favicon.webp" rel="shortcut icon">
+	<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+	<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
+	<script crossorigin="anonymous"
 	        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	        crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script crossorigin="anonymous"
 	        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	        crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script crossorigin="anonymous"
 	        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	        crossorigin="anonymous"></script>
+	        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="https://unpkg.com/moment@2.24.0/moment.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/de.js"></script>
@@ -26,8 +28,16 @@
 <form class="form-horizontal" style="padding-top: 15px;">
 	<div class="col-sm-10">
 		<div class="form-row">
+			<div class="col text-right">
+				<button class="btn btn-primary"><i class="far fa-save"></i> Profil laden...</button>
+			</div>
+		</div>
+	</div>
+	<div style="height: 10px;"></div>
+	<div class="col-sm-10">
+		<div class="form-row">
 			<div class="col">
-				<select id="gender" class="form-control">
+				<select class="form-control" id="gender">
 					<option value="female">Frau</option>
 					<option value="male">Herr</option>
 				</select>
@@ -41,27 +51,13 @@
 	<div class="col-sm-10">
 		<div class="form-row">
 			<div class="col">
-				<input type="text" id="namefrom" class="form-control" placeholder="Name des Elternteils">
+				<input class="form-control" id="namefrom" placeholder="Name des Elternteils" type="text">
 			</div>
 			<div class="col">
-				<input type="text " placeholder="Datum des Streiks" class="form-control"
-				       onfocus="$(this).hide().next().attr('hidden',false).focus();"/>
-				<input type="date" hidden="true" id="datefrom" class="form-control">
-			</div>
-		</div>
-	</div>
-	<div style="height: 10px;"></div>
-	<div class="col-sm-10">
-		<div class="form-row">
-			<div class="col">
-				<input type="text " placeholder="Zeit der Berurlaubung" class="form-control"
-				       onfocus="$(this).hide().next().attr('hidden',false).focus();"/>
-				<input hidden="true" type="time" id="timego" class="form-control">
-			</div>
-			<div class="col">
-				<input type="text" placeholder="Beginn des Streiks" class="form-control"
-				       onfocus="$(this).hide().next().attr('hidden',false).focus();"/>
-				<input hidden="true" type="time" id="timestart" class="form-control">
+				<input class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"
+				       placeholder="Datum des Streiks"
+				       type="text "/>
+				<input class="form-control" hidden="true" id="datefrom" type="date">
 			</div>
 		</div>
 	</div>
@@ -69,7 +65,24 @@
 	<div class="col-sm-10">
 		<div class="form-row">
 			<div class="col">
-				<select id="childgender" class="form-control">
+				<input class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"
+				       placeholder="Zeit der Berurlaubung"
+				       type="text "/>
+				<input class="form-control" hidden="true" id="timego" type="time">
+			</div>
+			<div class="col">
+				<input class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"
+				       placeholder="Beginn des Streiks"
+				       type="text"/>
+				<input class="form-control" hidden="true" id="timestart" type="time">
+			</div>
+		</div>
+	</div>
+	<div style="height: 10px;"></div>
+	<div class="col-sm-10">
+		<div class="form-row">
+			<div class="col">
+				<select class="form-control" id="childgender">
 					<option value="daughter">Tochter</option>
 					<option value="son">Sohn</option>
 				</select>
@@ -83,10 +96,10 @@
 	<div class="col-sm-10">
 		<div class="form-row">
 			<div class="col">
-				<input type="text" placeholder="Klasse" class="form-control" id="class">
+				<input class="form-control" id="class" placeholder="Klasse" type="text">
 			</div>
 			<div class="col">
-				<input type="text" placeholder="Genauer Ort des Streiks" class="form-control" id="place">
+				<input class="form-control" id="place" placeholder="Genauer Ort des Streiks" type="text">
 			</div>
 		</div>
 	</div>
@@ -94,13 +107,13 @@
 	<div class="col-sm-10">
 		<div class="form-row">
 			<div class="col">
-				<input type="text" id="city" class="form-control" placeholder="Stadt, in dem der Streik stattfindet">
+				<input class="form-control" id="city" placeholder="Stadt, in dem der Streik stattfindet" type="text">
 			</div>
 			<div class="col">
-				<select id="state" class="form-control">
+				<select class="form-control" id="state">
 					<option value="bw">Baden-W&uuml;rttemberg</option>
 					<option value="by">Bayern</option>
-					<option value="be" selected>Berlin</option>
+					<option selected value="be">Berlin</option>
 					<option value="bb">Brandenburg</option>
 					<option value="hb">Bremen</option>
 					<option value="hh">Hamburg</option>
@@ -122,8 +135,10 @@
 <div style="height: 20px;"></div>
 <div class="form-group">
 	<div class="col-sm-offset-2 col-sm-10">
-		<button type="button" onclick="submit_data()" id="submit-btn" class="btn btn-lg btn-outline-success" style="width: 100%">
-			Entschuldigung erstellen</button>
+		<button class="btn btn-lg btn-outline-success" id="submit-btn" onclick="submit_data()" style="width: 100%"
+		        type="button">
+			Entschuldigung erstellen
+		</button>
 	</div>
 </div>
 </body>
