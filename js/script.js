@@ -1,5 +1,11 @@
 // TODO: write a reason for each state, fill it in the gaps in the switch statements and uncomment them
 
+function selectPlace (btn) {
+  console.log(btn.getAttribute('data-city'))
+  console.log(btn.getAttribute('data-time'))
+  console.log(btn.getAttribute('data-place'))
+}
+
 function submit_data () {
   const nameto = document.getElementById('nameto').value
   const namefrom = document.getElementById('namefrom').value
