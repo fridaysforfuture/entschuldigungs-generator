@@ -1,5 +1,30 @@
 // TODO: write a reason for each state, fill it in the gaps in the switch statements and uncomment them
 
+function getFriday () {
+  const dayOfWeek = 5 //friday
+  const date = new Date()
+  date.setDate(date.getDate() + (dayOfWeek + 7 - date.getDay()) % 7);
+  return date
+}
+
+function selectPlace (btn) {
+  console.log(btn.getAttribute('data-city'))
+  console.log(btn.getAttribute('data-time').split(' ')[0])
+  console.log(btn.getAttribute('data-place'))
+  document.getElementById('city').value = btn.getAttribute('data-city')
+  document.getElementById('timestart').value = btn.getAttribute('data-time').split(' ')[0]
+  document.getElementById('place').value = btn.getAttribute('data-place')
+  document.getElementById('datefrom').value = moment(getFriday()).format('YYYY-MM-DD')
+  // hide the placeholders
+  $(document.getElementById('datefrom-placeholder')).hide().next().attr('hidden',false).focus()
+  $(document.getElementById('timestart-placeholder')).hide().next().attr('hidden',false).focus()
+
+  btn.classList.remove('btn-outline-primary')
+  btn.classList.add('btn-success')
+  btn.innerHTML = 'Ausgew&auml;hlt!'
+  $('#mapModal').modal('toggle')
+}
+
 function submit_data () {
   const nameto = document.getElementById('nameto').value
   const namefrom = document.getElementById('namefrom').value
