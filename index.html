@@ -29,7 +29,7 @@
 	<div class="col-sm-10">
 		<div class="form-row">
 			<div class="col text-right">
-				<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#mapModal" onclick="map.invalidateSize();">
+				<button class="btn btn-primary" data-target="#mapModal" data-toggle="modal" onclick="map.invalidateSize();" type="button">
 					<i class="far fa-map"></i> Profil laden
 				</button>
 			</div>
@@ -56,9 +56,9 @@
 				<input class="form-control" id="namefrom" placeholder="Name des Elternteils" type="text">
 			</div>
 			<div class="col">
-				<input class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"
-				       placeholder="Datum des Streiks"
-				       type="text " id="datefrom-placeholder"/>
+				<input class="form-control" id="datefrom-placeholder"
+				       onfocus="$(this).hide().next().attr('hidden',false).focus();"
+				       placeholder="Datum des Streiks" type="text "/>
 				<input class="form-control" hidden="true" id="datefrom" type="date">
 			</div>
 		</div>
@@ -73,9 +73,9 @@
 				<input class="form-control" hidden="true" id="timego" type="time">
 			</div>
 			<div class="col">
-				<input class="form-control" onfocus="$(this).hide().next().attr('hidden',false).focus();"
-				       placeholder="Beginn des Streiks"
-				       type="text" id="timestart-placeholder"/>
+				<input class="form-control" id="timestart-placeholder"
+				       onfocus="$(this).hide().next().attr('hidden',false).focus();"
+				       placeholder="Beginn des Streiks" type="text"/>
 				<input class="form-control" hidden="true" id="timestart" type="time">
 			</div>
 		</div>
@@ -145,20 +145,20 @@
 </div>
 
 <!-- Map selector modal -->
-<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
+<div aria-hidden="true" aria-labelledby="mapModalLabel" class="modal fade" id="mapModal" role="dialog" tabindex="-1">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="mapModalLabel">Wähle deinen Streikort</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				<div id="map" class="box" style="width: 100%; height: 400px;"></div>
-				<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+				<div class="box" id="map" style="width: 100%; height: 400px;"></div>
+				<link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" rel="stylesheet">
 				<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-				<link rel="stylesheet" href="https://fridaysforfuture.de/map/leaflet-gesture-handling.min.css" type="text/css">
+				<link href="https://fridaysforfuture.de/map/leaflet-gesture-handling.min.css" rel="stylesheet" type="text/css">
 				<script src="https://fridaysforfuture.de/map/leaflet-gesture-handling.min.js"></script>
 				<script>
                   var map = L.map('map', {
@@ -180,8 +180,7 @@
 
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button class="btn btn-outline-danger" data-dismiss="modal" type="button">Abbrechen</button>
 			</div>
 		</div>
 	</div>

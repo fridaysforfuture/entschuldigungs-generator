@@ -14,9 +14,15 @@ function selectPlace (btn) {
   document.getElementById('city').value = btn.getAttribute('data-city')
   document.getElementById('timestart').value = btn.getAttribute('data-time').split(' ')[0]
   document.getElementById('place').value = btn.getAttribute('data-place')
-  document.getElementById('datefrom').value = moment(getFriday().toDateString(), 'ddd, MMM D YYYY').format('YYYY-MM-DD')
-  $(document.getElementById('datefrom-placeholder')).hide().next().attr('hidden',false).focus();
-  $(document.getElementById('timestart-placeholder')).hide().next().attr('hidden',false).focus();
+  document.getElementById('datefrom').value = moment(getFriday()).format('YYYY-MM-DD')
+  // hide the placeholders
+  $(document.getElementById('datefrom-placeholder')).hide().next().attr('hidden',false).focus()
+  $(document.getElementById('timestart-placeholder')).hide().next().attr('hidden',false).focus()
+
+  btn.classList.remove('btn-outline-primary')
+  btn.classList.add('btn-success')
+  btn.innerHTML = 'Ausgew&auml;hlt!'
+  $('#mapModal').modal('toggle')
 }
 
 function submit_data () {
