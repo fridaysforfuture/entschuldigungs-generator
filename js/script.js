@@ -8,13 +8,36 @@ function getFriday () {
 }
 
 function selectPlace (btn) {
-  console.log(btn.getAttribute('data-city'))
-  console.log(btn.getAttribute('data-time').split(' ')[0])
-  console.log(btn.getAttribute('data-place'))
+  // console.log(btn.getAttribute('data-city'))
+  // console.log(btn.getAttribute('data-time').split(' ')[0])
+  // console.log(btn.getAttribute('data-place'))
+  // console.log(btn.getAttribute('data-state'))
+  const stateBtn = btn.getAttribute('data-state')
+  let state
+  switch (stateBtn) {
+    case 'Baden-Württemberg': state = 'bw'; break
+    case 'Bayern': state = 'ba'; break
+    case 'Berlin': state = 'be'; break
+    case 'Brandenburg': state = 'bb'; break
+    case 'Bremen': state = 'hb'; break
+    case 'Hamburg': state = 'hh'; break
+    case 'Hessen': state = 'he'; break
+    case 'Mecklenburg-Vorpommern': state = 'mv'; break
+    case 'Niedersachsen': state = 'ni'; break
+    case 'Nordrhein-Westfalen': state = 'nw'; break
+    case 'Rheinland-Pfalz': state = 'rp'; break
+    case 'Saarland': state = 'sl'; break
+    case 'Sachsen': state = 'sn'; break
+    case 'Sachsen-Anhalt': state = 'st'; break
+    case 'Schleswig-Holstein': state = 'sh'; break
+    case 'Thüringen': state = 'th'; break
+  }
+  document.getElementById('state').value = state
   document.getElementById('city').value = btn.getAttribute('data-city')
   document.getElementById('timestart').value = btn.getAttribute('data-time').split(' ')[0]
   document.getElementById('place').value = btn.getAttribute('data-place')
   document.getElementById('datefrom').value = moment(getFriday()).format('YYYY-MM-DD')
+
   // hide the placeholders
   $(document.getElementById('datefrom-placeholder')).hide().next().attr('hidden',false).focus()
   $(document.getElementById('timestart-placeholder')).hide().next().attr('hidden',false).focus()
