@@ -37,6 +37,7 @@ function submit_data () {
   const gender = document.getElementById('gender').value
   const schoolClass = document.getElementById('class').value
   const place = document.getElementById('place').value
+  const residence = document.getElementById('residence').value
 
   const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
 
@@ -197,7 +198,7 @@ Mit freundlichen Grüßen,
 ${namefrom}
 
 
-${city}, den ${datenow} ${new Array(80 - city.length - datenow.length).join('_')} 
+${residence}, den ${datenow} ${new Array(80 - city.length - datenow.length).join('_')} 
 
 Unterschrift der/des Erziehungsberechtigten`
       }
