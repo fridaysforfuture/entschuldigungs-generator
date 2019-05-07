@@ -16,7 +16,7 @@ function selectPlace (btn) {
   let state
   switch (stateBtn) {
     case 'Baden-Württemberg': state = 'bw'; break
-    case 'Bayern': state = 'ba'; break
+    case 'Bayern': state = 'by'; break
     case 'Berlin': state = 'be'; break
     case 'Brandenburg': state = 'bb'; break
     case 'Bremen': state = 'hb'; break
@@ -31,6 +31,7 @@ function selectPlace (btn) {
     case 'Sachsen-Anhalt': state = 'st'; break
     case 'Schleswig-Holstein': state = 'sh'; break
     case 'Thüringen': state = 'th'; break
+    default: state = 'be'; break
   }
   document.getElementById('state').value = state
   document.getElementById('city').value = btn.getAttribute('data-city')
