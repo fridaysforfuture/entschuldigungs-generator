@@ -200,7 +200,7 @@ Die Treibhausgas-Emissionen steigen seit Jahren und noch immer werden Kohle, Öl
 
 Die Bewegung hat im Vorfeld schon viel Unterstützung erfahren, ist allerdings auch oft auf Ablehnung gestoßen, meist aufgrund von Unsicherheit und der Angst vor negativen Konsequenzen.
 
-Mit diesem Antrag möchte ich klarstellen, dass ich mich mit der rechtlichen Grundlage von Schülerstreiks sorgfältig auseinandergesetzt haben:
+Mit diesem Antrag möchte ich klarstellen, dass ich mich mit der rechtlichen Grundlage von Schülerstreiks sorgfältig auseinandergesetzt habe:
 
 
 In Artikel 20a des Grundgesetzes ist festgehalten, dass der Staat die natürlichen Lebensgrundlagen schützt und Verantwortung für die künftigen Generationen trägt.
