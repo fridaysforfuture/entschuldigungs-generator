@@ -160,10 +160,20 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
   const datenow = moment().format('DD.MM.YYYY')
   const date2 = moment(datefrom).format('DD.MM.YYYY')
 
-  document.getElementById('submit-btn').innerHTML = 'Gesendet!'
+  document.getElementById('submit-btn').innerHTML = 'Entschuldigung erstellt!'
   document.getElementById('submit-btn').disabled = true
   document.getElementById('submit-btn').classList.add('btn-success')
   document.getElementById('submit-btn').classList.remove('btn-outline-success')
+
+  pdfMake.fonts = {
+    Jost: {
+      normal: 'jost.ttf',
+    },
+    Merriweather: {
+      normal: 'merriweather.ttf'
+    }
+  };
+
 
   const docDefinition = {
     content: [
@@ -222,15 +232,20 @@ Mit freundlichen Grüßen,
 ${namefrom}
 
 
-${residence}, den ${datenow} ${new Array(80 - city.length - datenow.length).join('_')} 
+${residence}, den ${datenow} ${new Array(55 - city.length - datenow.length).join('_')} 
 
-Unterschrift der/des Erziehungsberechtigten`
+Unterschrift der/des Erziehungsberechtigten`,
+        style: 'defaultStyle'
       }
     ],
     styles: {
       title: {
-        fontSize: 28,
-        bold: true
+        font: 'Jost',
+        fontSize: 28
+      },
+      defaultStyle: {
+        font: 'Merriweather',
+        fontSize: 11
       }
     }
   }
