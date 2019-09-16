@@ -142,6 +142,9 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
     // case 'th':
     //   stateReason = ` `
     //   break
+    case 'none':
+      stateReason = ``
+      break
     default:
       stateReason = `Wie es in Artikel 1 des Berliner Schulgesetz steht, ist das "Ziel (der Schule), die Heranbildung von Persönlichkeiten, welche fähig sind, [...] das staatliche und gesellschaftliche Leben [...] im Einklang mit Natur und Umwelt zu gestalten."
 
