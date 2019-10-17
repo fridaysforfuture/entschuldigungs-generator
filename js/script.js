@@ -121,9 +121,15 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
     // case 'ni':
     //   stateReason = ` `
     //   break
-    // case 'nw':
-    //   stateReason = ` `
-    //   break
+    case 'nw':
+      stateReason = `Die Teilnahme und Mitorganisation dieser Veranstaltung steht im Einklang mit dem in § 2 SchulG NRW festgehalten Bildungs- und Erziehungsauftrag der Schule, insbesondere mit §2 (2) „Die Jugend soll erzogen werden im Geist der Menschlichkeit, der Demokratie und der Freiheit, [...], zu Verantwortung für Tiere und die Erhaltung der natürlichen Lebensgrundlage, [...]“
+
+Zudem wird wie in §2 (4) festgeschrieben dadurch die „Entfaltung der Person, die Selbstständigkeit (von) Entscheidungen  und das Verantwortungsbewusstsein für das Gemeinwohl, die Natur und die Umwelt“ gefördert, auch handelt es sich hierbei um einen Beitrag zum ebenfalls in diesem Absatz definierten Erziehungsauftrag, die Schüler*innen „zu befähigen, verantwortlich am sozialen, gesellschaftlichen, wirtschaftlichen, beruflichen, kulturellen und politischen Leben teilzunehmen und ihr eigenes Leben zu gestalten“
+Auch legt §2 (6)  unter anderem fest, Schüler sollten „insbesondere lernen, selbstständig und eigenverantwortlich zu handeln, für sich und gemeinsam mit anderen zu lernen und Leistungen zu erbringen, die eigene Meinung zu vertreten und die Meinung anderer zu achten,“
+Obwohl das Schulministerium NRW in einer Rundmail empfiehlt, die Teilnahme an Klimademonstrationen während der Schulzeit zu ächten, da diese einen Streikcharakter enthielten und Schülern kein Streikrecht zusteht, ist in diesem Falle zu entgegnen, dass der primäre Charakter dieser Veranstaltung der einer Kundgebung ist. Die Uhrzeit ist nicht bewusst so gewählt, einen Konflikt mit der Schulpflicht zu provozieren, was sich erstens daraus ergibt, dass sich die Veranstaltung nicht primär an Schüler richtet und die Uhrzeit von Gewerkschaften explizit erbeten wurde, da es ihnen dadurch einfacher wird, Teilnehmer aus der Arbeitswelt zu mobilisieren
+
+Zudem ist im Falle einer Ablehnung zu beachten, dass damit die in §8 Grundgesetz festgelegte Versammlungsfreiheit eingeschränkt wird, bei der viele Juristen der Auffassung sind, dass sie über der §38 SchulG NRW festgelegten Schulpflicht in der Sekundasrstufe II steht, zum einen da das Grundgesetz im allgemeinen über anderen Gesetzen steht, zum anderen da das deutsche Rechtsprinzip „Bundesrecht bricht Länderrecht“ gilt; Insofern bitte ich gegebenenfalls eine Ablehnung genau zu prüfen.`
+      break
     // case 'rp':
     //   stateReason = ` `
     //   break
