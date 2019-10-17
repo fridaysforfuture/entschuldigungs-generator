@@ -233,7 +233,7 @@ ${stateReason}
 Da die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, die allen Schüler*innen zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag dort am ${date2} besser wahrnehmen, als in der Schule selbst.
 Ich nehme zur Kenntnis, dass es sich bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichtspflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.
 
-Ich bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden abzusehen
+Ich bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden abzusehen.
 
 
 Mit freundlichen Grüßen,
