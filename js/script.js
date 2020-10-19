@@ -238,7 +238,7 @@ Ich nehme zur Kenntnis, dass es sich bei der Demonstration nicht um eine Schulve
 Ich bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden abzusehen.
 
 
-Mit freundlichen Grüßen,
+Mit freundlichen Grüßen
 
 ${namefrom}
 
