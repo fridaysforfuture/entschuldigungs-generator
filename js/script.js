@@ -248,7 +248,7 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
 
 hiermit beantrage ich, ${childsalutation} ${namechild}, Klasse ${schoolClass}, am ${date2} ab ${timego} Uhr zu beurlauben.
 
-${namechild} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für Frieden und Klimagerechtigkeit teilnehmen. Am ${date2} ab ${timestart} findet in ${city}, ${location}, eine Fridays for Future Demonstration von jungen Menschen unter dem Motto "#PeopleNotProfit" statt.
+${namechild} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für Frieden und Klimagerechtigkeit teilnehmen. Am ${date2} ab ${timestart} findet in ${city}, ${place}, eine Fridays for Future Demonstration von jungen Menschen unter dem Motto "#PeopleNotProfit" statt.
 
 Die EU zahlt jeden Tag hunderte millionen Euro an Putin für Kohle, Öl und Gas. Über Jahrzehnte hat sich Deutschland von Autokraten wie Putin abhängig gemacht und jetzt stehen wir vor den Konsequenzen: unsere Kinder wachsen inmitten von Krieg und Klimakrise auf. Weltweit kollabieren Lebensgrundlagen, und wir sind politisch erpressbar geworden.
 
