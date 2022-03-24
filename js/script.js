@@ -63,12 +63,52 @@ function submit_data () {
   const place = document.getElementById('place').value
   const residence = document.getElementById('residence').value
 
-  const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
+  //const salutation = gender === 'female' ? 'Sehr geehrte Frau' : 'Sehr geehrter Herr'
+  let salutation = "Sehr geehrte*r"
+  switch (gender) {
+    case 'female':
+      salutation = 'Sehr geehrte Frau'
+      break
+    case 'male':
+      salutation = 'Sehr geehrter Herr'
+      break
+    case 'neutral':
+      salutation = "Sehr geehrte*r"
+      break
+    default:
+      salutation = "Sehr geehrte*r"
+      break
+  }
 
   const childgender = document.getElementById('childgender').value
-  const childsalutation = childgender === 'daughter' ? 'meine Tochter' : 'meinen Sohn'
-  const childpronoun = childgender === 'daughter' ? 'Sie' : 'Er'
-  const childpronoun2 = childgender === 'daughter' ? 'ihre' : 'seine'
+  //const childsalutation = childgender === 'daughter' ? 'meine Tochter' : 'meinen Sohn'
+  //const childpronoun = childgender === 'daughter' ? 'Sie' : 'Er'
+  //const childpronoun2 = childgender === 'daughter' ? 'ihre' : 'seine'
+  let childsalutation = "mein Kind"
+  let childpronoun = "Es"
+  let childpronoun2 = "seine"
+  switch (childgender) {
+    case 'daughter':
+      childsalutation = 'meine Tochter'
+      childpronoun = 'Sie'
+      childpronoun2 = 'ihre'
+      break
+    case 'son':
+      childsalutation = 'meinen Sohn'
+      childpronoun = 'Er'
+      childpronoun2 = 'seine'
+      break
+    case 'neutral':
+      childsalutation = "mein Kind"
+      childpronoun = "Es"
+      childpronoun2 = "seine"
+      break
+    default:
+      childsalutation = "mein Kind"
+      childpronoun = "Es"
+      childpronoun2 = "seine"
+      break
+  }
 
   let stateReason
   switch (state) {
@@ -208,35 +248,32 @@ Außerdem besteht die Möglichkeit laut Artikel 83 (Aufgaben der Schülervertret
 
 hiermit beantrage ich, ${childsalutation} ${namechild}, Klasse ${schoolClass}, am ${date2} ab ${timego} Uhr zu beurlauben.
 
-${childpronoun} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für eine lebensrettende Klimapolitik gehen.
-Am ${date2} ab ${timestart} findet in ${city}, ${place}, eine Demonstration von Schüler*innen für eine lebensrettende Klimapolitik unter dem Motto "#FridaysForFuture" statt.
+${namechild} wird an diesem Tag nicht am Unterricht teilnehmen, sondern auf eine Demonstration für Frieden und Klimagerechtigkeit teilnehmen. Am ${date2} ab ${timestart} findet in ${city}, ${location}, eine Fridays for Future Demonstration von jungen Menschen unter dem Motto "#PeopleNotProfit" statt.
 
-Nach dem Vorbild von und in Solidarität mit Greta Thunberg, die jeden Freitag vor dem schwedischen Parlament streikt, ist die Bewegung inzwischen auf der ganzen Welt vertreten.
+Die EU zahlt jeden Tag hunderte millionen Euro an Putin für Kohle, Öl und Gas. Über Jahrzehnte hat sich Deutschland von Autokraten wie Putin abhängig gemacht und jetzt stehen wir vor den Konsequenzen: unsere Kinder wachsen inmitten von Krieg und Klimakrise auf. Weltweit kollabieren Lebensgrundlagen, und wir sind politisch erpressbar geworden.
 
-Der Klimawandel ist längst eine reale Bedrohung für unsere Zukunft. Unsere Kinder werden die ersten Leidtragenden des Klimawandels sein. Gleichzeitig sind wir die letzte Generation, die einen katastrophalen Klimawandel noch verhindern kann. Doch unsere Politiker*innen unternehmen nichts, um die Klimakrise abzuwenden.
+Der Klimawandel ist längst eine reale Bedrohung für unsere Zukunft. Unsere Kinder werden die ersten Leidtragenden des Klimawandels sein. Gleichzeitig sind wir die letzte Generation, die einen katastrophalen Klimawandel noch verhindern kann. Doch unsere Politiker*innen unternehmen viel zu wenig, um die Klimakrise abzuwenden und die Kriegsfinanzierung zu stoppen.
 
-Die Treibhausgas-Emissionen steigen seit Jahren und noch immer werden Kohle, Öl und Gas abgebaut und verbrannt. Deswegen geht mein Kind freitags nicht in die Schule. Denn mit jedem Tag, der ungenutzt verstreicht, wird ${childpronoun2} Zukunft aufs Spiel gesetzt!
+Die Treibhausgas-Emissionen steigen seit Jahren und noch immer werden Kohle, Öl und Gas abgebaut und verbrannt. Deswegen geht mein Kind freitags nicht in die Schule. Denn mit jedem Tag, der ungenutzt verstreicht, wird seine Zukunft aufs Spiel gesetzt!
 
 #FridaysForFuture ist weder an eine Partei noch an eine Organisation gebunden. Die Klimastreik-Bewegung hat ihre eigene Dynamik und wird durch hunderte individuelle junge Menschen getragen, die freitags streiken, eine Website aufbauen, Pressemitteilungen schreiben, Reden halten, Lautsprecher organisieren und vieles mehr.
 
-Die Bewegung hat im Vorfeld schon viel Unterstützung erfahren, ist allerdings auch oft auf Ablehnung gestoßen, meist aufgrund von Unsicherheit und der Angst vor negativen Konsequenzen.
-
 Mit diesem Antrag möchte ich klarstellen, dass ich mich mit der rechtlichen Grundlage von Schülerstreiks sorgfältig auseinandergesetzt habe:
-
 
 In Artikel 20a des Grundgesetzes ist festgehalten, dass der Staat die natürlichen Lebensgrundlagen schützt und Verantwortung für die künftigen Generationen trägt.
 
-Dieser Pflicht den künftigen Generationen gegenüber kommt der Staat allerdings nicht nach, weshalb für uns gilt: "Wir streiken, bis ihr handelt!"
+Dieser Pflicht den künftigen Generationen gegenüber kommt der Staat allerdings nicht nach, weshalb für sie gilt: "Wir streiken, bis ihr handelt!"
 
-Wir berufen uns bei unserem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit aller Schüler*innen festgehalten (AschO, § 36).
+Die jungen Menschen berufen sich bei ihrem Streik vor allem auf unser Recht auf Demonstrationsfreiheit, welches jedem Menschen in Deutschland zusteht (GG, Art. 8). Außerdem ist in der allgemeinen Schulordnung die Meinungsfreiheit aller Schüler*innen festgehalten (AschO, § 36). 
 
 ${stateReason}
 
 Da die Demonstration eine vom Grundgesetz geschützte Form der Meinungsäußerung ist, die allen Schüler*innen zusteht (GG, Art. 8), und sich der Streik außerdem für eine Politik stark macht, welche unser aller Überleben auf diesem Planeten sichert, kann mein Kind den staatlichen Bildungsauftrag dort am ${date2} besser wahrnehmen, als in der Schule selbst.
+
 Ich nehme zur Kenntnis, dass es sich bei der Demonstration nicht um eine Schulveranstaltung handelt und die Lehrer*innen keine Aufsichtspflicht haben. Der Veranstalter stellt für die Dauer der Versammlung volljährige Ordner*innen.
 
-Ich bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter Fehlstunden abzusehen.
-
+Ich bitte darum, unter diesen besonderen Umständen von einer Eintragung unentschuldigter
+Fehlstunden abzusehen.
 
 Mit freundlichen Grüßen
 
@@ -245,7 +282,7 @@ ${namefrom}
 
 ${residence}, den ${datenow} ${new Array(55 - city.length - datenow.length).join('_')} 
 
-Unterschrift der/des Erziehungsberechtigten`,
+Unterschrift der*des Erziehungsberechtigten`,
         style: 'defaultStyle'
       }
     ],
